@@ -1,89 +1,222 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <title>JS01</title>
-  <link rel="stylesheet" href="../00-tools/css/reset.css">
-  <link rel="stylesheet" href="../00-tools/css/base.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<h1 class="u-mbm is-big">JS1</h1>
-<div class="wrapper">
-  <div class="u-mbm btn">Q1</div>
-  <div class="u-mbm btn">Q2</div>
-  <div class="u-mbm btn">Q3</div>
-  <div class="u-mbm btn">Q4</div>
-  <div class="u-mbm btn is-big">Q5</div>
-  <div class="u-mbm btn">Q6</div>
-  <div>
-    <dl class="u-mbm lists">
-      <dt>Q7_dt_1</dt>
-      <dd>Q7_dd_1</dd>
-    </dl>
-    <dl class="u-mbm lists">
-      <dt>Q7_dt_2</dt>
-      <dd>Q7_dd_2</dd>
-    </dl>
-    <dl class="u-mbm lists">
-      <dt>Q7_dt_3</dt>
-      <dd>Q7_dd_3</dd>
-    </dl>
-    <dl class="u-mbm lists">
-      <dt>Q7_dt_4</dt>
-      <dd>Q7_dd_</dd>
-    </dl>
-    <dl class="u-mbm lists">
-      <dt>Q7_dt_5</dt>
-      <dd>Q7_dd_5</dd>
-    </dl>
-  </div>
-  <div class="u-mbm btn">Q8</div>
-  <div class="u-mbm btn">Q9</div>
-  <ul class="u-mbm lists">
-    <li>Q10_1</li>
-    <li>Q10_2</li>
-    <li>Q10_3</li>
-  </ul>
-  <ul class="u-mbm lists">
-    <li>Q11_1</li>
-    <li>Q11_2</li>
-    <li>Q11_3</li>
-  </ul>
-  <div class="u-mbm btn">Q12</div>
-  <ul class="u-mbm lists">
-    <li>Q13_1</li>
-    <li>Q13_2</li>
-    <li>Q13_3</li>
-  </ul>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>JS01</title>
+    <link rel="stylesheet" href="../00-tools/css/reset.css" />
+    <link rel="stylesheet" href="../00-tools/css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 class="u-mbm is-big">JS1</h1>
+    <div class="wrapper">
+      <div id="Q1" class="u-mbm btn">Q1</div>
+      <div id="Q2" class="u-mbm btn">Q2</div>
+      <div id="Q3" class="u-mbm btn">Q3</div>
+      <div id="Q4" class="u-mbm btn">Q4</div>
+      <div id="Q5" class="u-mbm btn is-big">Q5</div>
+      <div id="Q6" class="u-mbm btn">Q6</div>
+      <div>
+        <dl class="u-mbm lists">
+          <dt>Q7_dt_1</dt>
+          <dd>Q7_dd_1</dd>
+        </dl>
+        <dl class="u-mbm lists">
+          <dt>Q7_dt_2</dt>
+          <dd>Q7_dd_2</dd>
+        </dl>
+        <dl class="u-mbm lists">
+          <dt>Q7_dt_3</dt>
+          <dd>Q7_dd_3</dd>
+        </dl>
+        <dl class="u-mbm lists">
+          <dt>Q7_dt_4</dt>
+          <dd>Q7_dd_</dd>
+        </dl>
+        <dl class="u-mbm lists">
+          <dt>Q7_dt_5</dt>
+          <dd>Q7_dd_5</dd>
+        </dl>
+      </div>
+      <div id="Q8" class="u-mbm btn">Q8</div>
+      <div id="Q9" class="u-mbm btn">Q9</div>
+      <ul id="Q10" class="u-mbm lists">
+        <li>Q10_1</li>
+        <li>Q10_2</li>
+        <li>Q10_3</li>
+      </ul>
+      <ul id="Q11" class="u-mbm lists">
+        <li>Q11_1</li>
+        <li>Q11_2</li>
+        <li>Q11_3</li>
+      </ul>
+      <div id="Q12" class="u-mbm btn">Q12</div>
+      <ul id="Q13" class="u-mbm lists">
+        <li>Q13_1</li>
+        <li>Q13_2</li>
+        <li>Q13_3</li>
+      </ul>
+    </div>
 
-<script defer>
-  // js課題① 下記問題のJSを実装して下さい
+    <script defer>
+      // js課題① 下記問題のJSを実装して下さい
 
-  // 第1問 ロードから5秒後にQ1の要素の文字サイズを30pxにせよ。
+      // 第1問 ロードから5秒後にQ1の要素の文字サイズを30pxにせよ。
 
-  // 第2問 Q2の要素をクリックしたら背景色を赤、文字色を黒にせよ。
+      setTimeout(function () {
+        document.getElementById("Q1").style.fontSize = "30px";
+      }, 5000);
 
-  // 第3問 Q3の要素をクリックしたら文字色を赤にし、その状態でもう一度クリックすると元に戻るようにせよ。
+      // 第2問 Q2の要素をクリックしたら背景色を赤、文字色を黒にせよ。
 
-  // 第4問 Q4の要素をクリックしたらこの要素の前後とこの要素内の前後に<p>テキスト</p>を挿入せよ。
+      const Q2 = document.getElementById("Q2");
 
-  // 第5問 Q5の要素をクリックしたらこの要素からis-bigというクラスを削除せよ。
+      Q2.onclick = () => {
+        Q2.style.backgroundColor = "red";
+        Q2.style.color = "black";
+      };
 
-  // 第6問 Q6の要素をクリックしたらこの要素を0.5秒かけてmargin-rightとmargin-bottomを150pxの位置に移動させよ。
+      // 第3問 Q3の要素をクリックしたら文字色を赤にし、その状態でもう一度クリックすると元に戻るようにせよ。
 
-  // 第7問 Q7の要素をクリックしたら、その要素が「何番目のdlの子要素」かをconsole.log()とalert()を用いて表示させよ。（最初の要素は0ではなく1と表示されること）Hint：closest()メソッドを使う
+      const Q3 = document.getElementById("Q3");
 
-  // 第8問 Q8の要素をhoverしたらis-bigというクラスを付与し、hoverが外れたら、クラスを削除せよ。
+      Q3.onclick = () => {
+        let color = Q3.style.color;
+        //if文の条件式に、color!=redを定義する
+        //赤でない時は赤に変更し、赤の時は白に変更するよう命令
+        if (color != "red") {
+          Q3.style.color = "red";
+        } else {
+          Q3.style.color = "#fff";
+        }
+      };
 
-  // 第9問 Q9の要素をクリックしたらこの要素にdata属性を設定し、その内容をconsoleに表示せよ。
+      // 第4問 Q4の要素をクリックしたらこの要素の前後とこの要素内の前後に<p>テキスト</p>を挿入せよ。
 
-  // 第10問 Q10の子要素をクリックしたら、その要素のインデックスと等しいid="q11"の子要素にis-bigというクラスを追加し、それ以外のクラスからは削除せよ。（インデックスの一致する要素だけにis-bigがついている状態）
+      const Q4 = document.getElementById("Q4");
 
-  // 第11問 Q12をクリックしたら、Q13リストのli要素の順番と中身のテキストをconsoleに表示させよ。
-</script>
-</body>
+      Q4.onclick = () => {
+        Q4.insertAdjacentHTML("beforebegin", "テキスト");
+        Q4.insertAdjacentHTML("afterbegin", "テキスト");
+        Q4.insertAdjacentHTML("beforeend", "テキスト");
+        Q4.insertAdjacentHTML("afterend", "テキスト");
+      };
+
+      // 第5問 Q5の要素をクリックしたらこの要素からis-bigというクラスを削除せよ。
+
+      const Q5 = document.getElementById("Q5");
+
+      Q5.onclick = () => {
+        Q5.classList.remove("is-big");
+      };
+
+      // 第6問 Q6の要素をクリックしたらこの要素を0.5秒かけてmargin-rightとmargin-bottomを150pxの位置に移動させよ。
+
+      const Q6 = document.getElementById("Q6");
+
+      setTimeout(() => {
+        Q6.onclick = () => {
+          Q6.style.margin = "0 0 150px -150px";
+        };
+      }, 500);
+
+      // 第7問 Q7の要素をクリックしたら、その要素が「何番目のdlの子要素」かをconsole.log()とalert()を用いて表示させよ。（最初の要素は0ではなく1と表示されること）Hint：closest()メソッドを使う
+
+      //querySelectorAll()で配列風オブジェクトに変換
+      //.slice.call()を使用し、新しく配列を作成
+      let allQ7s = document.querySelectorAll("dl");
+      allQ7s = [].slice.call(allQ7s, 0);
+
+      //forEach文は、配列操作に特化したループ処理
+      //配列の一つに対して処理を行う場合に有効
+      //allQ7sに格納されている値をコールバック関数Q7と定義、iは配列のindex番号
+      //``でテンプレートリテラルの文字列にし、＄{}で変数と計算式を記述できるようにする
+      //インデックス番号に対して＋1を行う事で、数値が1番と表示される（何もしない場合は0と表示される）
+      allQ7s.forEach((Q7, i) => {
+        Q7.onclick = () => {
+          console.log(`${i + 1}番目のdlの子要素`);
+          alert(`${i + 1}番目のdlの子要素`);
+        };
+      });
+
+      // 第8問 Q8の要素をhoverしたらis-bigというクラスを付与し、hoverが外れたら、クラスを削除せよ。
+
+      const Q8 = document.getElementById("Q8");
+
+      //addEventListener()でtypeをmouseoverに定義、classList.addでclassを追加
+      Q8.addEventListener("mouseover", () => {
+        Q8.classList.add("is-big");
+      });
+      //addEventListener()でtypeをmouseleaveに定義、classList.removeでclassを削除
+      Q8.addEventListener("mouseleave", () => {
+        Q8.classList.remove("is-big");
+      });
+
+      // 第9問 Q9の要素をクリックしたらこの要素にdata属性を設定し、その内容をconsoleに表示せよ。
+
+      const Q9 = document.getElementById("Q9");
+      let consoleQ9 = (Q9.dataset.name = "Q9");
+
+      Q9.onclick = () => {
+        console.log(consoleQ9);
+      };
+
+      // 第10問 Q10の子要素をクリックしたら、その要素のインデックスと等しいid="q11"の子要素にis-bigというクラスを追加し、それ以外のクラスからは削除せよ。（インデックスの一致する要素だけにis-bigがついている状態）
+
+      //タブメニューの切り替え時に使えるコード
+      //要素同士のインデックス番号が等しい場合にクラスを付与している
+      //それ以外の要素にはクラスを削除するよう命令
+      //二重のループ処理を行っている
+      //このコードであれば、上手く切り替わる
+      const Q10 = [...document.querySelectorAll("#Q10 li")];
+      const Q11 = [...document.querySelectorAll("#Q11 li")];
+
+      for (let i = 0; i < Q10.length; i++) {
+        const Q10s = Q10[i];
+        Q10s.onclick = () => {
+          for (let a = 0; a < Q11.length; a++) {
+            let Q11s = Q11[a];
+            if (i === a) {
+              Q11s.classList.add("is-big");
+            } else {
+              Q11s.classList.remove("is-big");
+            }
+          }
+        };
+      }
+
+      //下記のコードだとクラスは付与されるが、それ以外の要素をクリックしても切り替わらない
+      //
+
+      // let a = 0;
+      // for (let i = 0; i < Q10.length; i++, a++) {
+      //   const Q10s = Q10[i];
+      //   const Q11s = Q11[a];
+
+      //   Q10s.onclick = () => {
+      //     if (Q11s.className !== "is-big") {
+      //       Q11s.classList.add("is-big");
+      //     } else if(Q11s.className === "is-big"){
+      //       Q11s.classList.remove("is-big");
+      //     }
+      //   };
+      // }
+
+      // 第11問 Q12をクリックしたら、Q13リストのli要素の順番と中身のテキストをconsoleに表示させよ。
+
+      const Q12 = document.getElementById("Q12");
+      const Q13 = document.querySelectorAll("#Q13 li");
+
+      Q12.onclick = () => {
+        Q13.forEach((Q13s, index) => {
+          console.log(` ${index + 1}: ${Q13s.textContent}`);
+        });
+      };
+    </script>
+  </body>
 </html>

@@ -1,73 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <title>JS2</title>
-  <link rel="stylesheet" href="../00-tools/css/reset.css">
-  <link rel="stylesheet" href="../00-tools/css/base.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<h1 class="u-mbm is-big">JS2</h1>
-<div class="wrapper">
-  <div class="u-mbm btn">Q1</div>
-  <div class="u-mbm btn">Q2</div>
-  <div class="u-mbm btn">Q3</div>
-  <div class="u-mbm btn">Q4</div>
-  <div class="u-mbm btn">Q5</div>
-  <div class="u-mbm btn">Q6</div>
-  <div class="u-mbm btn">Q7</div>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>JS2</title>
+    <link rel="stylesheet" href="../00-tools/css/reset.css" />
+    <link rel="stylesheet" href="../00-tools/css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 class="u-mbm is-big">JS2</h1>
+    <div class="wrapper">
+      <div id="Q1" class="u-mbm btn">Q1</div>
+      <div class="u-mbm btn">Q2</div>
+      <div id="Q3" class="u-mbm btn">Q3</div>
+      <div id="Q4" class="u-mbm btn">Q4</div>
+      <div id="Q5" class="u-mbm btn">Q5</div>
+      <div id="Q6" class="u-mbm btn">Q6</div>
+      <div id="Q7" class="u-mbm btn">Q7</div>
+    </div>
 
-<script defer>
-  /**
-   * 第1問 id="q1"の要素をクリックしたら、下記のconfirmを出力
-   * 年代を確認しますか？
-   * trueの場合
-   * 変数に年齢を入れ、以下の条件の時、指定された"テキスト"をアラートで出力せよ。
-   *
-   * 0~1歳：⚪︎歳のあなたは乳児でちゅ。
-   * 2~6歳：⚪︎歳のあなたは幼児でしゅ。
-   * 7~12歳：⚪︎歳のあなたは小学生だよ。
-   * 13~15歳：⚪︎歳のあなたは中学生だぜ。
-   * 16~18歳：⚪︎歳のあなたは高校生っす。
-   * 19~22歳：⚪︎歳のあなたは大学生です。
-   * 23~59歳：⚪︎歳のあなたは社会人でございます。
-   * 60~99歳：⚪︎歳のあなたは高齢者じゃ。
-   * 100~：すごい。
-   * それ以外（そもそも数字じゃ無いなど）：ちゃんといれてください。
-   *
-   * falseの場合
-   * 何もしない
-   */
+    <script defer>
+      /**
+       * 第1問 id="q1"の要素をクリックしたら、下記のconfirmを出力
+       * 年代を確認しますか？
+       * trueの場合
+       * 変数に年齢を入れ、以下の条件の時、指定された"テキスト"をアラートで出力せよ。
+       *
+       * 0~1歳：⚪︎歳のあなたは乳児でちゅ。 infant
+       * 2~6歳：⚪︎歳のあなたは幼児でしゅ。 youngChild
+       * 7~12歳：⚪︎歳のあなたは小学生だよ。 elementarySchoolStudent
+       * 13~15歳：⚪︎歳のあなたは中学生だぜ。 middleSchoolStudent
+       * 16~18歳：⚪︎歳のあなたは高校生っす。 highSchoolStudent
+       * 19~22歳：⚪︎歳のあなたは大学生です。 universityStudent
+       * 23~59歳：⚪︎歳のあなたは社会人でございます。 workingAdult
+       * 60~99歳：⚪︎歳のあなたは高齢者じゃ。 oldPeople
+       * 100~：すごい。 longevity
+       * それ以外（そもそも数字じゃ無いなど）：ちゃんといれてください。
+       *
+       * falseの場合
+       * 何もしない
+       */
 
-  // 第2問 id="q2"の要素をクリックしたらfor文を用いて、12345678910という文字列を作り、#q2の後にその文字列を挿入せよ。
+      // 第2問 id="q2"の要素をクリックしたらfor文を用いて、12345678910という文字列を作り、#q2の後にその文字列を挿入せよ。
 
-  // 第3問 id="q3"の要素をクリックしたらfor文、if文を用いて、1~100の数字で3と7を約数に持つ（3と7で割れる）整数で文字列を作り、#q3の後にその文字列を挿入せよ。
+      // 第3問 id="q3"の要素をクリックしたらfor文、if文を用いて、1~100の数字で3と7を約数に持つ（3と7で割れる）整数で文字列を作り、#q3の後にその文字列を挿入せよ。
 
-  // 第4問 id="q4"の要素をクリックしたらfor文を用いて、[2,4,6,8,10,12,14,16,18,20]という配列をconsoleに出力せよ。
+      const Q3 = document.getElementById("Q3");
 
-  /**
-   * 第5問 id="q5"の要素をクリックし、以下の情報をそれぞれ表示せよ。
-   *
-   * ①今開いているファイル（index.html）のパス
-   * ②年（2021）
-   * ③月（1~12）
-   * ④日（1~31）
-   *
-   */
+      //変数outputに空の文字列を代入
+      //if文の条件式でi % 3 === 0 && i % 7 === 0を定義（3と7で割れる数）
+      //条件に当てはまる数を、変数iにtoString()で文字列に変換しoutputに代入
+      //insertAdjacentHTML("afterend", output)でQ3の後ろに挿入
+      Q3.onclick = () => {
+        let Q3Lade = "";
+        for (let i = 1; i <= 100; i++) {
+          if (i % 3 === 0 && i % 7 === 0) {
+            Q3Lade = Q3Lade + i.toString() + ",";
+          }
+        }
+        Q3.insertAdjacentHTML("afterend", Q3Lade);
+      };
 
-  /**
-   * 第6問
-   * id="q6"の要素をクリックすると要素の文字が赤くなり、
-   * id="q7"の要素をクリックすると要素の文字を青くさせよ。
-   *
-   * 但し、コールバック関数は１つで実装すること。
-   * 必要に応じて、要素に属性などは追加して良いものとします。
-   */
+      // 第4問 id="q4"の要素をクリックしたらfor文を用いて、[2,4,6,8,10,12,14,16,18,20]という配列をconsoleに出力せよ。
 
-</script>
-</body>
+      const Q4 = document.getElementById("Q4");
+
+      //計算式を使ったバージョン
+      //空の配列を作成
+      //変数iの初期値を2に設定
+      //20回以下までループするように命令
+      //変数iが2ずつ増えていくように命令
+      //変数arrに.pushメソッドで要素を追加するよう命令
+      //consoleで出力
+
+      Q4.onclick = () => {
+        const arr = [];
+        for (let i = 2; i <= 20; i += 2) {
+          arr.push(i);
+        }
+        console.log(arr);
+      };
+
+      //簡単バージョン
+      //配列に[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]を入れる
+      //ループ処理は一回のみ設定
+
+      // const Q4s = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+
+      // Q4.onclick = () => {
+      //   for (let i = 0; i < 1; i++) {
+      //     console.log(Q4s);
+      //   }
+      // };
+
+      /**
+       * 第5問 id="q5"の要素をクリックし、以下の情報をそれぞれ表示せよ。
+       *
+       * ①今開いているファイル（index.html）のパス
+       * ②年（2021）
+       * ③月（1~12）
+       * ④日（1~31）
+       *
+       */
+
+      const Q5 = document.getElementById("Q5");
+      const path = location.pathname;
+      const now = new Date();
+      const year = now.getFullYear();
+      const mouth = now.getMonth() + 1;
+      const day = now.getDate();
+      Q5.onclick = () => {
+        const strings =
+          path + "/" + "<br>" + year + "/" + mouth + "/" + day + "<br>";
+        Q5.insertAdjacentHTML("afterend", strings);
+      };
+
+      /**
+       * 第6問
+       * id="q6"の要素をクリックすると要素の文字が赤くなり、
+       * id="q7"の要素をクリックすると要素の文字を青くさせよ。
+       *
+       * 但し、コールバック関数は１つで実装すること。
+       * 必要に応じて、要素に属性などは追加して良いものとします。
+       */
+
+      const Q6 = document.getElementById("Q6");
+      const Q7 = document.getElementById("Q7");
+
+      Q6.onclick = () => {
+        Q6.style.color = "red";
+      };
+      Q7.onclick = () => {
+        Q7.style.color = "blue";
+      };
+    </script>
+  </body>
 </html>
