@@ -16,7 +16,7 @@
     <h1 class="u-mbm is-big">JS2</h1>
     <div class="wrapper">
       <div id="Q1" class="u-mbm btn">Q1</div>
-      <div class="u-mbm btn">Q2</div>
+      <div id="Q2" class="u-mbm btn">Q2</div>
       <div id="Q3" class="u-mbm btn">Q3</div>
       <div id="Q4" class="u-mbm btn">Q4</div>
       <div id="Q5" class="u-mbm btn">Q5</div>
@@ -46,7 +46,46 @@
        * 何もしない
        */
 
+      const Q1 = document.getElementById("Q1");
+
+      Q1.onclick = () => {
+        if (confirm("年代を確認しますか？")) {
+          const age = prompt("年齢を入れてください");
+          if (!age || isNaN(age)) {
+            alert("ちゃんといれてください。");
+          } else if (age >= 0 && age <= 1) {
+            alert(age + "歳のあなたは乳児でちゅ。");
+          } else if (age >= 2 && age <= 6) {
+            alert(age + "歳のあなたは幼児でしゅ。");
+          } else if (age >= 7 && age <= 12) {
+            alert(age + "歳のあなたは小学生だよ。");
+          } else if (age >= 13 && age <= 15) {
+            alert(age + "歳のあなたは中学生だぜ。");
+          } else if (age >= 16 && age <= 18) {
+            alert(age + "歳のあなたは高校生っす。");
+          } else if (age >= 19 && age <= 22) {
+            alert(age + "歳のあなたは大学生です。");
+          } else if (age >= 23 && age <= 59) {
+            alert(age + "歳のあなたは社会人でございます。");
+          } else if (age >= 60 && age <= 99) {
+            alert(age + "歳のあなたは高齢者じゃ。");
+          } else if (age >= 100) {
+            alert(age + "歳すごい。");
+          }
+        }
+      };
+
       // 第2問 id="q2"の要素をクリックしたらfor文を用いて、12345678910という文字列を作り、#q2の後にその文字列を挿入せよ。
+
+      const Q2 = document.getElementById("Q2");
+
+      Q2.onclick = () => {
+        let numberString = "";
+        for (let i = 1; i <= 10; i++) {
+          numberString = numberString + i;
+        }
+        Q2.insertAdjacentHTML("afterend", numberString);
+      };
 
       // 第3問 id="q3"の要素をクリックしたらfor文、if文を用いて、1~100の数字で3と7を約数に持つ（3と7で割れる）整数で文字列を作り、#q3の後にその文字列を挿入せよ。
 
@@ -57,13 +96,13 @@
       //条件に当てはまる数を、変数iにtoString()で文字列に変換しoutputに代入
       //insertAdjacentHTML("afterend", output)でQ3の後ろに挿入
       Q3.onclick = () => {
-        let Q3Lade = "";
+        let Q3Lead = "";
         for (let i = 1; i <= 100; i++) {
           if (i % 3 === 0 && i % 7 === 0) {
-            Q3Lade = Q3Lade + i.toString() + ",";
+            Q3Lead = Q3Lead + i.toString() + ",";
           }
         }
-        Q3.insertAdjacentHTML("afterend", Q3Lade);
+        Q3.insertAdjacentHTML("afterend", Q3Lead);
       };
 
       // 第4問 id="q4"の要素をクリックしたらfor文を用いて、[2,4,6,8,10,12,14,16,18,20]という配列をconsoleに出力せよ。
