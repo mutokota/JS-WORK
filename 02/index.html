@@ -20,8 +20,10 @@
       <div id="Q3" class="u-mbm btn">Q3</div>
       <div id="Q4" class="u-mbm btn">Q4</div>
       <div id="Q5" class="u-mbm btn">Q5</div>
-      <div id="Q6" class="u-mbm btn">Q6</div>
-      <div id="Q7" class="u-mbm btn">Q7</div>
+      <div id="btns">
+        <div id="Q6" class="u-mbm btn">Q6</div>
+        <div id="Q7" class="u-mbm btn">Q7</div>
+      </div>
     </div>
 
     <script defer>
@@ -168,15 +170,19 @@
        * 必要に応じて、要素に属性などは追加して良いものとします。
        */
 
+      const btns = [...document.querySelectorAll("#btns div")];
       const Q6 = document.getElementById("Q6");
       const Q7 = document.getElementById("Q7");
 
-      Q6.onclick = () => {
-        Q6.style.color = "red";
-      };
-      Q7.onclick = () => {
-        Q7.style.color = "blue";
-      };
+      for (let i = 0; i < btns.length; i++) {
+        const btn = btns[i];
+        btn.onclick = () => {
+          if (Q6 !== "red" && Q7 !== "blue") {
+            Q6.style.color = "red";
+            Q7.style.color = "blue";
+          }
+        };
+      }
     </script>
   </body>
 </html>

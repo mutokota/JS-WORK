@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="wrapper"></div>
+    <button id="myButton">Click me!</button>
     <script defer>
       /*
        * 今回やるのはFizzBuzzです。
@@ -42,6 +43,10 @@
           FizzBuzz.innerHTML += i + "<br>";
         }
       }
+      const button = document.getElementById("myButton");
+      button.addEventListener("click", (event) => {
+        console.log(event);
+      });
     </script>
   </body>
 </html>
